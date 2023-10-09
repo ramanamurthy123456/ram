@@ -1,1 +1,1 @@
-print("Welcome to amzuit 1")
+print("Welcome to amzuit server1")
