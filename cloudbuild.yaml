@@ -1,1 +1,6 @@
-
+steps:
+- name: 'gcr.io/cloud-builders/git'
+  args: ['clone', 'https://github.com/ramanamurthy123456/ram.git']
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['build', '-t', 'gcr.io/abstract-web-393206/image:$COMMIT_SHA', '.']
+images: ['gcr.io/gcr.io/abstract-web-393206/image:$COMMIT_SHA']
