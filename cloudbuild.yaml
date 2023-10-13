@@ -1,8 +1,8 @@
 steps:
-- name: 'gcr.io/gcr.io/abstract-web-393206/image'
+- name: 'gcr.io/abstract-web-393206/image'
   args: ['clone', 'https://github.com/ramanamurthy123456/ram.git']
-- name: 'gcr.io/gcr.io/abstract-web-393206/image'
-  args: ['build', '-t', 'gcr.io/abstract-web-393206/image:$COMMIT_SHA', '.']
-images: ['gcr.io/abstract-web-393206/image:$COMMIT_SHA']
+- name: 'gcr.io/abstract-web-393206/image'
+  args: ['build', '-t', 'gcr.io/abstract-web-393206/image:v3', '.']
+images: ['gcr.io/abstract-web-393206/image:v3']
 options:
   logging: CLOUD_LOGGING_ONLY
