@@ -4,3 +4,4 @@ steps:
 - name: 'gcr.io/cloud-builders/docker'
   args: ['build', '-t', 'gcr.io/abstract-web-393206/image:$COMMIT_SHA', '.']
 images: ['gcr.io/gcr.io/abstract-web-393206/image:$COMMIT_SHA']
+logging: 'CLOUD_LOGGING_ONLY'
