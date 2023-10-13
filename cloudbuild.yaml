@@ -1,8 +1,17 @@
 steps:
 - name: 'gcr.io/abstract-web-393206/image'
   args: ['clone', 'https://github.com/ramanamurthy123456/ram.git']
-- name: 'gcr.io/abstract-web-393206/image'
-  args: ['build', '-t', 'gcr.io/abstract-web-393206/image:v3', '.']
-images: ['gcr.io/abstract-web-393206/image:v3']
+# Step 2: Install dependencies and run tests (customize this step based on your project).
+- name: 'gcr.io/cloud-builders/npm'
+  args: ['install']
+- name: 'gcr.io/cloud-builders/npm'
+  args: ['test']
+
+# Step 3: Deploy the application (customize this step based on your deployment method).
+- name: 'gcr.io/cloud-builders/gcloud'
+  args: ['app', 'deploy']
+
 options:
   logging: CLOUD_LOGGING_ONLY
+
+
