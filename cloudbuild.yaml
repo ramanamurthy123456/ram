@@ -1,10 +1,8 @@
 steps:
-- name: 'gcr.io/abstract-web-393206/image'
+- name: 'gcr.io/cloud-builders/git'
   args: ['clone', 'https://github.com/ramanamurthy123456/ram.git']
-- name: 'gcr.io/abstract-web-393206/image'
-  args: ['build', '-t', 'gcr.io/abstract-web-393206/image:amzu', '.']
-images: ['gcr.io/abstract-web-393206/image:']
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['build', '-t', 'gcr.io/abstract-web-393206/image:amzu', './ram/']
+images: ['gcr.io/abstract-web-393206/image:amzu']
 options:
   logging: CLOUD_LOGGING_ONLY
-
-
