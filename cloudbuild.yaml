@@ -2,7 +2,7 @@ steps:
 - name: 'gcr.io/cloud-builders/git'
   args: ['clone', 'https://github.com/ramanamurthy123456/ram.git']
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['build', '-t', 'gcr.io/abstract-web-393206/image:1', './ram/ram/']
+  args: ['build', '-t', 'gcr.io/abstract-web-393206/image:1', './ram']
 - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
   entrypoint: gcloud
   args:
