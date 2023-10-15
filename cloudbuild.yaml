@@ -2,7 +2,7 @@ steps:
 - name: 'gcr.io/cloud-builders/git'
   args: ['clone', 'https://github.com/ramanamurthy123456/ram.git']
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['build', '-t', 'gcr.io/abstract-web-393206/image:1', './ram']
+  args: ['build', '-t', 'gcr.io/abstract-web-393206/image:amzu', './ram']
 - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
   entrypoint: gcloud
   args:
@@ -10,10 +10,10 @@ steps:
   - 'deploy'
   - 'image'
   - '--image'
-  - 'gcr.io/abstract-web-393206/image:1'
+  - 'gcr.io/abstract-web-393206/image:amzu'
   - '--region'
   - 'us-central1'
   - '--allow-unauthenticated'
-images: ['gcr.io/abstract-web-393206/image:1']
+images: ['gcr.io/abstract-web-393206/image:amzu']
 options:
   logging: CLOUD_LOGGING_ONLY
