@@ -13,6 +13,7 @@ steps:
   - 'gcr.io/abstract-web-393206/image:amzu'
   - '--region'
   - 'us-central'
+  - '--allow-unauthenticated'
 images: ['gcr.io/abstract-web-393206/image:amzu']
 options:
   logging: CLOUD_LOGGING_ONLY
