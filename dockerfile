@@ -7,7 +7,7 @@ RUN pip install flask
 WORKDIR /app
 
 # Copy the current directory contents into the container at /app
-COPY ./python.py ./main.py
+COPY ./main.py ./main.py
 
 EXPOSE 8080
 
