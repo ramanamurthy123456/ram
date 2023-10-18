@@ -2,6 +2,7 @@ steps:
 - name: 'gcr.io/cloud-builders/git'
   args: ['clone', 'https://github.com/ramanamurthy123456/ram.git']
 - name: 'gcr.io/cloud-builders/docker'
+  args: ['build', '-t', 'gcr.io/my-project-12345678-402312/image:2', './ram']
 - name: 'gcr.io/cloud-builders/docker'
   args: ['push', 'gcr.io/my-project-12345678-402312/image:2']
 - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
@@ -12,7 +13,8 @@ steps:
   - 'image'
   - '--image'
   - 'gcr.io/my-project-12345678-402312/image:2'
-  - '--region = europe-west2 '
+  - '--region'
+  - 'us-west2'
   - '--allow-unauthenticated'
 # images: ['gcr.io/abstract-web-393206/image:amzu']
 options:
