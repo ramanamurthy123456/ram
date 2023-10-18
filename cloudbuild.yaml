@@ -12,7 +12,7 @@ steps:
   - 'image'
   - '--image'
   - 'gcr.io/my-project-12345678-402312/image:2'
-  - '--region = asia-east1'
+  - '--region = europe-west2 '
   - '--allow-unauthenticated'
 # images: ['gcr.io/abstract-web-393206/image:amzu']
 options:
