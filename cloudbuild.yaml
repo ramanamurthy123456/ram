@@ -2,9 +2,9 @@ steps:
 - name: 'gcr.io/cloud-builders/git'
   args: ['clone', 'https://github.com/ramanamurthy123456/ram.git']
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['build', '-t', 'gcr.io/abstract-web-393206/image:2', './ram']
+  args: ['build', '-t', 'gcr.io/my-project-12345678-402312/image:v1', './ram']
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['push', 'gcr.io/abstract-web-393206/image:2']
+  args: ['push', 'gcr.io/my-project-12345678-402312/image:v1']
 - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
   entrypoint: gcloud
   args:
@@ -12,7 +12,7 @@ steps:
   - 'deploy'
   - 'image'
   - '--image'
-  - 'gcr.io/abstract-web-393206/image:2'
+  - 'gcr.io/my-project-12345678-402312/image:v1'
   - '--region'
   - 'us-central1'
   - '--allow-unauthenticated'
