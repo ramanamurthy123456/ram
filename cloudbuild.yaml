@@ -14,7 +14,7 @@ steps:
   - '--image'
   - 'gcr.io/my-project-12345678-402312/image:v1'
   - '--region'
-  - 'us-central1'
+  - 'us-west1'
   - '--allow-unauthenticated'
 # images: ['gcr.io/abstract-web-393206/image:amzu']
 options:
