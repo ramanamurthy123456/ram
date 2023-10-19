@@ -17,8 +17,7 @@ steps:
   - 'us-west1'
   - '--no-allow-unauthenticated'
   - '--enable-private-nodes'
-  - '--binary-authorization=10.4.0.0/24'
   - '--enable-master-authorized-networks'
-  - '----binary-authorization=10.4.0.0/24'
+  - '--master-ipv4-cidr = 10.4.0.0/24'
 options:
   logging: CLOUD_LOGGING_ONLY
