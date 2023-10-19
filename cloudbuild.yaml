@@ -15,9 +15,10 @@ steps:
   - 'gcr.io/my-project-12345678-402312/image:2'
   - '--region'
   - 'us-west1'
-  # - '--enable-private-nodes'
-  - '--master-ipv4-cidr = 10.4.0.0/24'
   - '--no-allow-unauthenticated'
-# images: ['gcr.io/abstract-web-393206/image:amzu']
+  - '--enable-private-nodes'
+  - '--master-ipv4-cidr=10.4.0.0/24'
+  - '--enable-master-authorized-networks'
+  - '--master-authorized-networks=10.4.0.0/24'
 options:
   logging: CLOUD_LOGGING_ONLY
