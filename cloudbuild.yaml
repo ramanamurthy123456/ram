@@ -15,7 +15,9 @@ steps:
   - 'gcr.io/my-project-12345678-402312/image:2'
   - '--region'
   - 'us-west1'
-  - '--allow-unauthenticated'
+  - '--no-allow-unauthenticated'
+  - '--enable-private-nodes'
+
 # images: ['gcr.io/abstract-web-393206/image:amzu']
 options:
   logging: CLOUD_LOGGING_ONLY
