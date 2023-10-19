@@ -17,7 +17,7 @@ steps:
   - 'us-west1'
   - '--no-allow-unauthenticated'
   - '--enable-private-nodes'
-  - '--master-ipv4-cidr=10.4.0.0/24'
+  - '--binary-authorization=10.4.0.0/24'
   - '--enable-master-authorized-networks'
   - '--master-authorized-networks=10.4.0.0/24'
 options:
