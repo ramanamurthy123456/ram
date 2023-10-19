@@ -16,7 +16,6 @@ steps:
   - '--region'
   - 'us-west1'
   - '--no-allow-unauthenticated'
-  - '--enable-private-nodes'
 
 # images: ['gcr.io/abstract-web-393206/image:amzu']
 options:
