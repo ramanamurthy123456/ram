@@ -12,16 +12,16 @@ steps:
 #   - 'deploy'
 #   - '--image'
 #   - 'gcr.io/key-component-402312/image:2'
-- name: 'gcr.io/cloud-builders/gcloud'
-  entrypoint: 'gcloud'
-  args:
-  - '-c'
-  - 'gcloud auth configure-docker'
-  # - 'docker pull gcr.io/key-component-402312/image:2'
-  - 'gcloud app deploy --image-url=gcr.io/key-component-402312/image:2 --quiet'
-  timeout: '1600s'
-  images:
-    - 'gcr.io/key-component-402312/image:2'
+# - name: 'gcr.io/cloud-builders/gcloud'
+#   entrypoint: 'gcloud'
+#   args:
+#   - '-c'
+#   - 'gcloud auth configure-docker'
+#   # - 'docker pull gcr.io/key-component-402312/image:2'
+#   - 'gcloud app deploy --image-url=gcr.io/key-component-402312/image:2 --quiet'
+#   timeout: '1600s'
+#   images:
+#     - 'gcr.io/key-component-402312/image:2'
 
 # images: ['gcr.io/abstract-web-393206/image:amzu']
 options:
