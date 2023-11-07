@@ -5,17 +5,15 @@ steps:
   args: ['build', '-t', 'gcr.io/key-component-402312/image:2', './ram']
 - name: 'gcr.io/cloud-builders/docker'
   args: ['push', 'gcr.io/key-component-402312/image:2']
-- name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+- name: 'gcr.io/cloud-builders/gcloud'
   entrypoint: gcloud
   args:
-  - 'run'
+  - 'app'
   - 'deploy'
   - 'image'
   - '--image'
   - 'gcr.io/key-component-402312/image:2'
-  - '--region'
-  - 'us-west1'
-  - '--no-allow-unauthenticated'
+
 
 # images: ['gcr.io/abstract-web-393206/image:amzu']
 options:
