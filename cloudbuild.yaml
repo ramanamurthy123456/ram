@@ -10,7 +10,6 @@ steps:
   args:
   - 'app'
   - 'deploy'
-  - 'image'
   - '--image'
   - 'gcr.io/key-component-402312/image:2'
 
