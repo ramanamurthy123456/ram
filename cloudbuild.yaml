@@ -17,8 +17,8 @@ steps:
   args:
   - '-c'
   - 'gcloud auth configure-docker'
-  - ' docker pull gcr.io/key-component-402312/image:2'
-  - ' gcloud app deploy --image-url=gcr.io/key-component-402312/image:2 --quiet'
+  - 'docker pull gcr.io/key-component-402312/image:2'
+  - 'gcloud app deploy --image-url=gcr.io/key-component-402312/image:2 --quiet'
   timeout: '1600s'
 images:
 - 'gcr.io/key-component-402312/image:2'
