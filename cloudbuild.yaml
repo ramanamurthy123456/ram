@@ -6,13 +6,22 @@ steps:
 - name: 'gcr.io/cloud-builders/docker'
   args: ['push', 'gcr.io/key-component-402312/image:2']
 - name: 'gcr.io/cloud-builders/gcloud'
-  entrypoint: gcloud
+  entrypoint: 'gcloud'
   args:
   - 'app'
   - 'deploy'
   - '--image'
   - 'gcr.io/key-component-402312/image:2'
-
+# - name: 'gcr.io/cloud-builders/gcloud'
+#   entrypoint: 'gcloud'
+#   args:
+#   - '-c'
+#   - 'gcloud auth configure-docker'
+#   - ' docker pull gcr.io/$PROJECT_ID/my-image:$COMMIT_SHA'
+#   - ' gcloud app deploy --image-url=gcr.io/$PROJECT_ID/my-image:$COMMIT_SHA --quiet'
+#   timeout: '1600s'
+# images:
+# - 'gcr.io/$PROJECT_ID/my-image:$COMMIT_SHA'
 
 # images: ['gcr.io/abstract-web-393206/image:amzu']
 options:
