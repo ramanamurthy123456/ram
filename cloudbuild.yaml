@@ -29,18 +29,18 @@ steps:
     entrypoint: 'bash'
     args:
     - '-c'
-    - 'jupyter nbconvert --to script train.ipynb && python3 train.py'
+    - 'jupyter nbconvert --to script main.ipynb && python3 train.py'
 
-  # Convert and execute the deploy.ipynb file
-  - name: 'python'
-    entrypoint: 'bash'
-    args:
-    - '-c'
-    - 'jupyter nbconvert --to script deploy.ipynb && python3 deploy.py'
+  # # Convert and execute the deploy.ipynb file
+  # - name: 'python'
+  #   entrypoint: 'bash'
+  #   args:
+  #   - '-c'
+  #   - 'jupyter nbconvert --to script deploy.ipynb && python3 deploy.py'
 
-  # Convert and execute the predict.ipynb file
-  - name: 'python'
-    entrypoint: 'bash'
-    args:
-    - '-c'
-    - 'jupyter nbconvert --to script predict.ipynb && python3 predict.py'
+  # # Convert and execute the predict.ipynb file
+  # - name: 'python'
+  #   entrypoint: 'bash'
+  #   args:
+  #   - '-c'
+  #   - 'jupyter nbconvert --to script predict.ipynb && python3 predict.py'
