@@ -12,6 +12,6 @@ COPY ./main.py ./main.py
 EXPOSE 8080
 
 # Run python script when the container launches
-CMD ["python", "main.ipynb"]
+CMD ["python", "main.py"]
 
 
