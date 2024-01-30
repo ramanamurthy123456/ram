@@ -1,7 +1,12 @@
 # cloudbuild.yaml
 
 steps:
-
+   # Install Jupyter nbconvert
+  - name: 'python'
+    entrypoint: 'bash'
+    args:
+    - '-c'
+    - 'pip install nbconvert jupyter'
   # Clone the repository
   - name: 'gcr.io/cloud-builders/git'
     args: ['clone', 'https://github.com/ramanamurthy123456/ram.git']
