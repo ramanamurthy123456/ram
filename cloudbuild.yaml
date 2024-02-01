@@ -1,34 +1,9 @@
-# cloudbuild.yaml
-
+  # Step 1: Clone the Git repository
 steps:
-  # Install Jupyter
-  - name: 'python'
-    entrypoint: 'bash'
-    args:
-    - '-c'
-    - 'pip install nbconvert jupyter'
+- name: 'gcr.io/cloud-builders/git'
+  args: ['clone', 'https://github.com/ramanamurthy123456/ram.git']
+ 
+  # Step 2: Run the Python script
+- name: 'gcr.io/cloud-builders/python'
+  args: ['main.py']
 
-  # Clone the repository
-  - name: 'gcr.io/cloud-builders/git'
-    args: ['clone', 'https://github.com/ramanamurthy123456/ram.git']
-
-  # Convert the Jupyter Notebook to Python script
-  - name: 'python'
-    entrypoint: 'bash'
-    args:
-    - '-c'
-    - 'jupyter nbconvert --to script main.ipynb'
-
-  # Install dependencies if needed
-  - name: 'python'
-    entrypoint: 'bash'
-    args:
-    - '-c'
-    - 'pip install -r requirements.txt'
-
-  # Run the Python script
-  - name: 'python'
-    entrypoint: 'bash'
-    args:
-    - '-c'
-    - 'python main.py'
